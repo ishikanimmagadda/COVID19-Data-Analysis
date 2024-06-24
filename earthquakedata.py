@@ -28,9 +28,6 @@ if response.status_code == 200:
     #converting data frame to .csv stored in earthquakedata.csv
     df.to_csv("earthquakedata.csv", index=False)
 
-    #allowing pandas to read into the csv
-    df = pd.read_csv("earthquakedata.csv")
-
     # seperating time and date 
     df['time'] = pd.to_datetime(df['time'], unit='ms')
     df['date'] = df['time'].dt.date
