@@ -23,6 +23,7 @@ if response.status_code == 200:
     for feature in features: 
         properties.append(feature["properties"])
 
+    # takes in a list of dictionaries.
     df = pd.DataFrame(properties)
     #converting data frame to .csv stored in earthquakedata.csv
     df.to_csv("earthquakedata.csv", index=False)
