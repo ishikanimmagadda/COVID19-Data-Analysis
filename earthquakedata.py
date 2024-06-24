@@ -18,6 +18,7 @@ data = response.json()
 
 if response.status_code == 200: 
     features = data["features"]
+    # creating a list of property dictionaries 
     properties = [] 
     for feature in features: 
         properties.append(feature["properties"])
